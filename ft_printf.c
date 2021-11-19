@@ -6,7 +6,7 @@
 /*   By: creyt <marvin@42lausanne.ch>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 14:31:04 by creyt             #+#    #+#             */
-/*   Updated: 2021/11/19 10:16:14 by creyt            ###   ########.fr       */
+/*   Updated: 2021/11/19 15:53:40 by creyt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,24 @@
 
 void	check_type(int i, const char *str, va_list ap, int *count)
 {
-	if (str[i] == 'c')
+	if (str[i + 1] == 'c')
 		ft_putchar_c(va_arg(ap, int), count);
-	else if (str[i] == 's')
+	else if (str[i + 1] == 's')
 		ft_putstr_s(va_arg(ap, char *), count);
-	else if (str[i] == 'p')
-		ft_puthexa_p(va_arg(ap, unsigned long));
-	else if (str[i] == 'd')
+	else if (str[i + 1] == 'p')
+		ft_puthexa_p(va_arg(ap, void *), count);
+	else if (str[i + 1] == 'd')
 		ft_putnbr_d(va_arg(ap, int), count);
-	else if (str[i] == 'i')
+	else if (str[i + 1] == 'i')
 		ft_putnbr_i(va_arg(ap, int), count);
-//	else if (str[i] == 'u')
-//		ft_put_u_nb(va_arg(ap, unsigned int));
-	else if (str[i] == 'x')
-		ft_puthexa_x(va_arg(ap, unsigned long), count);
-	else if (str[i] == 'X')
-		ft_puthexa_xx(va_arg(ap, unsigned long), count);
-	i++;
+	else if (str[i + 1] == 'u')
+		ft_putnbr_u(va_arg(ap, unsigned int), count);
+	else if (str[i + 1] == 'x')
+		ft_puthexa_x(va_arg(ap, unsigned int), count, 1);
+	else if (str[i + 1] == 'X')
+		ft_puthexa_xx(va_arg(ap, unsigned int), count, 1);
+	else if (str[i + 1] == '%')
+		ft_putstr_s("%", count);
 }
 
 int	ft_printf(const char *str, ...)
@@ -49,7 +50,7 @@ int	ft_printf(const char *str, ...)
 		if (str[i] != '%')
 			ft_putchar_c(str[i], &count);
 		else
-		check_type(i, str, ap, &count);
+			check_type(i++, str, ap, &count);
 		i++;
 	}
 	va_end(ap);
@@ -60,3 +61,5 @@ int	ft_printf(const char *str, ...)
 {
 	ft_printf("%d\n", 'c');
 }*/
+
+/* ou mettre ++i dans la fonction check it*/

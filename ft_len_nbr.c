@@ -1,29 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_u.c                                      :+:      :+:    :+:   */
+/*   ft_len_nbr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: creyt <marvin@42lausanne.ch>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/15 17:45:10 by creyt             #+#    #+#             */
-/*   Updated: 2021/11/19 11:49:32 by creyt            ###   ########.fr       */
+/*   Created: 2021/11/19 11:53:02 by creyt             #+#    #+#             */
+/*   Updated: 2021/11/19 15:40:10 by creyt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_putnbr_u(unsigned int n, int *count)
+int	ft_len_nbr(unsigned long nbr)
 {
-	if (n < 0)
+	int	i;
+
+	i = 0;
+	while (nbr)
 	{
-		n -= UINT_MAX - 1;
-		ft_putnbr_u(n, count);
+		nbr /= 10;
+		i++;
 	}
-	else if (n >= 0 && n <= 9)
-		ft_putchar_c((n + '0'), count);
-	else
-	{
-		ft_putnbr_u(n / 10, count);
-		ft_putnbr_u(n % 10, count);
-	}
+	return (i);
 }

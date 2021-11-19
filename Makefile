@@ -6,7 +6,7 @@
 #    By: creyt <marvin@42lausanne.ch>               +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/15 13:40:46 by creyt             #+#    #+#              #
-#    Updated: 2021/11/18 17:13:12 by creyt            ###   ########.fr        #
+#    Updated: 2021/11/19 11:59:38 by creyt            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,6 +20,8 @@ SRC = ft_printf.c \
 	  ft_putnbr_u.c \
 	  ft_putnbr_i.c \
 	  ft_putstr_s.c \
+	  ft_len_nbr.c \
+	  ft_puthexa_p.c \
 	  ft_puthexa_x.c \
 	  ft_puthexa_xx.c
 

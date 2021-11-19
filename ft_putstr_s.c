@@ -6,7 +6,7 @@
 /*   By: creyt <marvin@42lausanne.ch>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 16:56:50 by creyt             #+#    #+#             */
-/*   Updated: 2021/11/18 17:32:38 by creyt            ###   ########.fr       */
+/*   Updated: 2021/11/19 11:03:18 by creyt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ void	ft_putstr_s(char *s, int *count)
 	{
 		write(1, "(null)", 6);
 		*count += 6;
+		return ;
 	}
 	while (s[i])
 	{

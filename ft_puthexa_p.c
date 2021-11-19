@@ -6,7 +6,7 @@
 /*   By: creyt <marvin@42lausanne.ch>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/19 09:44:17 by creyt             #+#    #+#             */
-/*   Updated: 2021/11/19 10:15:41 by creyt            ###   ########.fr       */
+/*   Updated: 2021/11/19 15:53:43 by creyt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,5 @@
 void	ft_puthexa_p(void *ptr, int *count)
 {
 	ft_putstr_s("0x", count);
-	ft_puthexa_x((unsigned long)ptr, count);
+	ft_puthexa_x((unsigned long)ptr, count, 1);
 }
