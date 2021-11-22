@@ -6,7 +6,7 @@
 /*   By: creyt <marvin@42lausanne.ch>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 14:31:04 by creyt             #+#    #+#             */
-/*   Updated: 2021/11/19 15:53:40 by creyt            ###   ########.fr       */
+/*   Updated: 2021/11/22 17:31:39 by creyt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,10 +56,3 @@ int	ft_printf(const char *str, ...)
 	va_end(ap);
 	return (count);
 }
-
-/*int	main()
-{
-	ft_printf("%d\n", 'c');
-}*/
-
-/* ou mettre ++i dans la fonction check it*/

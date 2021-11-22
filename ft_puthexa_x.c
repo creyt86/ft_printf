@@ -6,15 +6,15 @@
 /*   By: creyt <marvin@42lausanne.ch>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 16:29:13 by creyt             #+#    #+#             */
-/*   Updated: 2021/11/19 15:48:32 by creyt            ###   ########.fr       */
+/*   Updated: 2021/11/22 14:48:19 by creyt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_puthexa_x(unsigned int n, int *count, int first)
+void	ft_puthexa_x(unsigned long n, int *count, int first)
 {
-	unsigned int	hex;
+	unsigned long	hex;
 	int				letter;
 	int				len;
 
